@@ -1,4 +1,4 @@
-#Simulating students with a simple model. Luke Eglington 9/28/2020
+#Old version. Simulating students with a simple model. Luke Eglington 9/28/2020
 
 rmse.fun <- function(x){
   return(sqrt(mean(x^2)))
@@ -20,7 +20,6 @@ bpd=1
 b2 = rtruncnorm(nstu, a=1, b=3, mean = 1.5, sd = 1)#student learning slopes
 stu.ints=rtruncnorm(nstu, a=-4, b=-2, mean = -3, sd = 2)#student intercepts
 
-#!NOTE! N items tied to ntrials, assuming different item every practice !
 item.ints=rtruncnorm(ntrials, a=-1, b=1, mean = 0, sd = .5)#item intercepts
 students=matrix(nrow=nstu,ncol=ntrials)
 pred1=matrix(nrow=nstu,ncol=ntrials)
